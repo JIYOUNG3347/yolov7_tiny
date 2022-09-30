@@ -4,11 +4,11 @@
 
 ------------
 ## Training
-### 1. 폴더 구성
+#### 1. 폴더 구성
 > Training folder
 >>
 
-### 2. .yaml 파일 작성
+#### 2. .yaml 파일 작성
 > yolov7/data directory에 custom.yaml 파일 작성
 ```
 train: C:/Users/user/Desktop/dataset/images/train
@@ -20,14 +20,14 @@ nc: 5  # number of classes
 names: ['person', 'gesture1', 'gesture2', 'gesture3', 'gesture4']  # class names
 ```
 
-### Yolov7 - Tiny Pretrained model 다운로드
+#### 3. Yolov7 - Tiny Pretrained model 다운로드
 > yolov7에서
 ```
 !wget https://github.com/WongKinYiu/yolov7/releases/download/v0.1/yolov7-tiny.pt
 ```
 
 
-### 4. Yolov7 - Tiny config .yaml 파일 작성
+#### 4. Yolov7 - Tiny config .yaml 파일 작성
 > yolov7/cfg/training에 yolov7_custom-tiny.yaml 파일 작성
 ```
 # parameters
@@ -144,13 +144,14 @@ head:
   ]
 ```
 
-### 5. Training
+#### 5. Training
 > yolov7에서
 ```
-python train.py --epochs 100 --workers 4 --device 0 --batch-size 32 --data data/custom.yaml --img 320 320 --cfg cfg/training/yolov7_custom-tiny.yaml --weights 'yolov7-tiny.pt' --name yolov7_tiny_tof_v2_fixed_res --hyp data/hyp.scratch.tiny.yaml
+python train.py --epochs 100 --workers 4 --device 0 --batch-size 32 --data data/custom.yaml --img 320 320 --cfg cfg/training/yolov7_custom-tiny.yaml --weights 'yolov7-tiny.pt' --name yolov7_tiny_custom_fixed_res --hyp data/hyp.scratch.tiny.yaml
 ```
+> yolov7/runs/train에 'yolov7_tiny_custom_fixed_res' Training 결과 파일 생성
 
-### 6. 추가 파라미터 조정
+#### 6. 추가 파라미터 조정
 > yolov7/data에서 hyp.scratch.tiny.yaml 수정
 ------------
 
