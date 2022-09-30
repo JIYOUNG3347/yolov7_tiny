@@ -157,5 +157,23 @@ python train.py --epochs 100 --workers 4 --device 0 --batch-size 32 --data data/
 
 #### 6. 추가 파라미터 조정
 > yolov7/data에서 hyp.scratch.tiny.yaml 수정
+
+
+#### 7. 예제 실행
+```
+python detect.py --weights yolov7-tiny.pt --conf 0.25 --img-size 640 --source inference/images/horses.jpg
+```
+
+#### 8. 실시간 영상(webcam) 실행
+```
+python detect.py  --weights yolov7-tiny.pt --conf 0.25 --img-size 640 --source 0 
+```
 ------------
 
+
+
+## Python
+------------
+#### webcam.py
+> Real-time object detectio using webcam
+>> 단순 파이썬으로 짜여진 webcam 실행 
