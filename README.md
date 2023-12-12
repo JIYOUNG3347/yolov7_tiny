@@ -168,8 +168,6 @@ python detect.py --weights yolov7-tiny.pt --conf 0.25 --img-size 640 --source in
 ```
 python detect.py  --weights yolov7-tiny.pt --conf 0.25 --img-size 640 --source 0 
 ```
-------------
-
 
 
 ## Python
